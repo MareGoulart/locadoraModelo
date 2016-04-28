@@ -54,14 +54,14 @@ public class TestePersistirAluguel {
             AluguelId id = new AluguelId();
             Produto p = em.find(Produto.class, 1);
       //      a.getAlugueis().add(p);
-            id.setNumeroCupom(98765432);
-            id.setPessoa(em.find(Pessoa.class, 1));
+            id.setNumeroCupom(65432);
+            id.setPessoa(em.find(Pessoa.class, 2));
             a.setId(id);
             a.setDataInicio(Calendar.getInstance());
             a.setDataEntrega(Calendar.getInstance());
             a.setPagamento(false);
-            a.setValorTotal(10.90);
-            a.setDesconto(0.10);
+            a.setValorTotal(65.90);
+            a.setDesconto(0.50);
             
 //            Compra c = new Compra();
 //            CompraID id = new CompraID();

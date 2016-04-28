@@ -47,11 +47,11 @@ public class TestePersistirPessoa {
         try {
             Pessoa p = new Pessoa();
 
-            p.setNome("Roseni Goulart");
+            p.setNome("Jho Goulart");
             p.setEmail("mariiiigoulart@hotmail.com");
             p.setNascimento(new GregorianCalendar(1989, Calendar.FEBRUARY, 10));
             p.setSenha("123456");
-            p.setCpf("018.270.430-08");
+            p.setCpf("014.787.970-10");
 
             em.getTransaction().begin();
             em.persist(p);

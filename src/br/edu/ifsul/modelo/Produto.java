@@ -24,7 +24,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "produto")
-public abstract class Produto implements Serializable {
+public class Produto implements Serializable {
 
     @Id
     @SequenceGenerator(name = "seq_produto", sequenceName = "seq_produto_id", allocationSize = 1)
@@ -55,8 +55,8 @@ public abstract class Produto implements Serializable {
             = @JoinColumn(name = "produto", referencedColumnName = "id",
                     nullable = false),
             inverseJoinColumns
-            = @JoinColumn(name = "aluguel", referencedColumnName = "id",
-                    nullable = false))
+            = {@JoinColumn(name = "aluguel_pessoa", referencedColumnName = "pessoa",nullable = false),
+            @JoinColumn(name = "aluguel_numero_cupom", referencedColumnName = "numero_cupom",nullable = false)})
     private List<Aluguel> alugueis = new ArrayList<>();
     
     @ManyToMany
