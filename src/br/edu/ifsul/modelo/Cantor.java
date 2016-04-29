@@ -21,6 +21,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 @Table(name = "cantor")
 public class Cantor implements Serializable {
+    //
     @Id
     @SequenceGenerator(name = "seq_cantor",sequenceName = "seq_cantor_id",allocationSize = 1)
     @GeneratedValue(generator = "seq_cantor",strategy = GenerationType.SEQUENCE)
